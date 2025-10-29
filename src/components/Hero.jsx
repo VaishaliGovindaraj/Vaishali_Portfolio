@@ -103,7 +103,7 @@ export const Hero = () => {
               {`const aboutMe: DeveloperProfile = {
   codename: "Vaishali Govindaraj",
   origin: "🌍 A QA Engineer turned Frontend Developer",
-  role: "Fullstack Web Sorcerer",
+  role: "Fullstack Web Developer",
   stack: {
     languages: ["JavaScript", "TypeScript", "SQL"],
     frameworks: ["React", "Next.js", "TailwindCSS", "Supabase"],
