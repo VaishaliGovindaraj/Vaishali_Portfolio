@@ -44,12 +44,10 @@ export const Hero = () => {
           </motion.h1>
           <motion.h2 className="hero-subtitle" variants={fadeInUp}>
             {" "}
-           Frontend Developer
+            Frontend Developer
           </motion.h2>
           <motion.p className="hero-description" variants={fadeInUp}>
-            I craft beautiful digital experiences that combine stunning design
-            with powerful functionality. Specializing in modern web applications
-            and interactive user interfaces.
+            I craft responsive, functional web experiences that blend clean design with solid engineering. With a strong learning in React and years of QA expertise, I build reliable, user-focused applications that deliver both style and performance.
           </motion.p>
 
           <motion.div className="cta-buttons" variants={staggerContainer}>
@@ -72,14 +70,11 @@ export const Hero = () => {
             </motion.a>
           </motion.div>
           <motion.div className="social-links" variants={staggerContainer}>
-            <motion.a href="https://github.com" target="_blank">
+            <motion.a href="https://github.com/VaishaliGovindaraj" target="_blank">
               <i className="fab fa-github"> </i>
             </motion.a>
-            <motion.a href="https://linkedin.com" target="_blank">
+            <motion.a href="https://www.linkedin.com/in/vaishali-govindaraj/" target="_blank">
               <i className="fab fa-linkedin"> </i>
-            </motion.a>
-            <motion.a href="https://gmail.com" target="_blank">
-              <i class="fa-solid fa-envelope"></i>
             </motion.a>
           </motion.div>
         </motion.div>
@@ -94,8 +89,9 @@ export const Hero = () => {
             <SyntaxHighlighter
               language="typescript"
               customStyle={{
+                fontSize: "1rem",
                 margin: 0,
-                padding: "2rem",
+                padding: "1.5rem",
                 height: "100%",
                 borderRadius: "20px",
                 background: "rgba(30, 41, 59, 0.8)",
@@ -112,15 +108,16 @@ export const Hero = () => {
     languages: ["JavaScript", "TypeScript", "SQL"],
     frameworks: ["React", "Next.js", "TailwindCSS", "Supabase"],
   },
-  traits: [
-    "pixel-perfectionist",
-    "API whisperer",
-    "dark mode advocate",
-    "terminal aesthetic enthusiast",
+traits: [
+    "detail-oriented problem solver",
+    "data-driven thinker",
+    "UI/UX enthusiast",
+    "quality-focused developer",
+    "continuous learner",
   ],
   missionStatement:
     "Turning ideas into interfaces and bugs into feature",
-  availability: "Available for hire",
+  availability: "Open for LIA / Internship opportunities"
 };`}
             </SyntaxHighlighter>
           </div>
