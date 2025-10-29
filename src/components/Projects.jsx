@@ -44,7 +44,7 @@ export const Projects = () => {
           className="project-card"
           variants={fadeInUp}
           whileHover={{ y: -10, transition: { duration: 0.2 } }}
-          onClick={() => window.open("https://social-media-dashboard.vercel.app", "_blank")}
+          onClick={() => window.open("https://context-meal-db.vercel.app/", "_blank")}
           style={{ cursor: "pointer" }}
         >
 
@@ -64,39 +64,95 @@ export const Projects = () => {
           </p>
           <div className="project-tech">
             <span>React</span>
-            <span>Node.js</span>
-            <span>MongoDB</span>
+            <span>Next js</span>
+            <span>Typescript</span>
+            <span>Context API</span>
           </div>
         </motion.div>
 
+            {/* Project 2 */}
           <motion.div
           className="project-card"
           variants={fadeInUp}
           whileHover={{ y: -10, transition: { duration: 0.2 } }}
-          onClick={() => window.open("https://social-media-dashboard.vercel.app", "_blank")}
+          onClick={() => window.open("https://shipshow-web.vercel.app/", "_blank")}
           style={{ cursor: "pointer" }}
         >
           <motion.div
             className="project-image"
             style={{
-              backgroundImage: "url('/projects/social-media.png')",
+              backgroundImage: "url('/absoluteshipshow.png')",
             }}
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.2 }}
           />
-          <h3>Social Media Dashboard</h3>
+          <h3>Absolute ShipShow</h3>
           <p>
-            A comprehensive dashboard for social media analytics, scheduling,
-            and engagement tracking.
+           Absolute Shipshow is a fast-paced, chaotic co-op pirate combat game where you scavenge weapons, fight enemies, and claim treasure with friends. Simple controls and creative gameplay make every battle unpredictable and wildly fun.
           </p>
           <div className="project-tech">
             <span>React</span>
-            <span>Node.js</span>
-            <span>MongoDB</span>
+            <span>Next js</span>
+            <span>Tailwind</span>
+            <span>Typescript</span>
           </div>
         </motion.div>
 
-        {/* --- Project 1 --- */}
+        {/* --- Project 3 --- */}
+        <motion.div
+          className="project-card"
+          variants={fadeInUp}
+          whileHover={{ y: -10, transition: { duration: 0.2 } }}
+          onClick={() => window.open("https://enginelight-web.vercel.app/", "_blank")}
+          style={{ cursor: "pointer" }}
+        >
+          <motion.div
+            className="project-image"
+            style={{
+              backgroundImage: "url('/enginelight.png')",
+            }}
+            whileHover={{ scale: 1.05 }}
+            transition={{ duration: 0.2 }}
+          />
+          <h3>Engine Light</h3>
+          <p>
+            A website developed for a game which explains how in a post-apocalyptic world overrun by AI and machines, one survivor in Sweden rises from loss to seek revenge. Armed with a battered car, he embarks on a desperate mission to fight back against robotic overlords.
+          </p>
+          <div className="project-tech">
+            <span>React</span>
+            <span>Next js</span>
+            <span>Tailwind</span>
+            <span>Typescript</span>
+          </div>
+        </motion.div>
+
+        {/* --- Project 4 --- */}
+        <motion.div
+          className="project-card"
+          variants={fadeInUp}
+          whileHover={{ y: -10, transition: { duration: 0.2 } }}
+          onClick={() => window.open("https://react-spa-travel.vercel.app/", "_blank")}
+          style={{ cursor: "pointer" }}
+        >
+          <motion.div
+            className="project-image"
+            style={{
+              backgroundImage: "url('/nomadnest.png')",
+            }}
+            whileHover={{ scale: 1.05 }}
+            transition={{ duration: 0.2 }}
+          />
+          <h3>Nomad Nest</h3>
+          <p>
+A dynamic single-page travel app built with React, showcasing beautiful destinations with smooth navigation and responsive design. It offers seamless exploration of travel spots and attractions through an elegant, user-friendly interface.          </p>
+          <div className="project-tech">
+            <span>React</span>
+            <span>Javascript</span>
+            <span>CSS</span>
+          </div>
+        </motion.div>
+
+        {/* --- Project 5 --- */}
         <motion.div
           className="project-card"
           variants={fadeInUp}
@@ -121,61 +177,8 @@ export const Projects = () => {
           </div>
         </motion.div>
 
-        {/* --- Project 2 --- */}
-        <motion.div
-          className="project-card"
-          variants={fadeInUp}
-          whileHover={{ y: -10, transition: { duration: 0.2 } }}
-          onClick={() => window.open("https://social-media-dashboard.vercel.app", "_blank")}
-          style={{ cursor: "pointer" }}
-        >
-          <motion.div
-            className="project-image"
-            style={{
-              backgroundImage: "url('/projects/social-media.png')",
-            }}
-            whileHover={{ scale: 1.05 }}
-            transition={{ duration: 0.2 }}
-          />
-          <h3>Social Media Dashboard</h3>
-          <p>
-            A comprehensive dashboard for social media analytics, scheduling,
-            and engagement tracking.
-          </p>
-          <div className="project-tech">
-            <span>React</span>
-            <span>Node.js</span>
-            <span>MongoDB</span>
-          </div>
-        </motion.div>
+        
 
-        {/* --- Project 3 --- */}
-        <motion.div
-          className="project-card"
-          variants={fadeInUp}
-          whileHover={{ y: -10, transition: { duration: 0.2 } }}
-          onClick={() => window.open("https://productivity-timer.vercel.app", "_blank")}
-          style={{ cursor: "pointer" }}
-        >
-          <motion.div
-            className="project-image"
-            style={{
-              backgroundImage: "url('/projects/stopwatch.png')",
-            }}
-            whileHover={{ scale: 1.05 }}
-            transition={{ duration: 0.2 }}
-          />
-          <h3>Productivity Timer</h3>
-          <p>
-            A sleek productivity timer app with customizable sessions, stats,
-            and dark mode support.
-          </p>
-          <div className="project-tech">
-            <span>React</span>
-            <span>TypeScript</span>
-            <span>TailwindCSS</span>
-          </div>
-        </motion.div>
       </motion.div>
     </motion.section>
   );
