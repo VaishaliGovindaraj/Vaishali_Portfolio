@@ -1,6 +1,6 @@
-import { motion } from "framer-motion";
-import emailjs from "@emailjs/browser";
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
+import { motion } from "framer-motion";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -48,12 +48,6 @@ export const Contact = () => {
       message: "",
     });
 
-    console.log({
-  service: import.meta.env.VITE_EMAILJS_SERVICE_ID,
-  template: import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-  publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
-});
-
     try {
       await emailjs.send(
         import.meta.env.VITE_EMAILJS_SERVICE_ID,
@@ -62,8 +56,7 @@ export const Contact = () => {
           name: formData.name,
           email: formData.email,
           message: formData.message,
-        },
-        //  import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+        }
       );
 
       setFormStatus({
@@ -84,10 +77,8 @@ export const Contact = () => {
         success: false,
         error: true,
         message: "Failed to send message. Please try again.",
-        
       });
       console.error("EmailJS Error:", error);
-    console.error("Error details:", error.text);
     }
   };
 
@@ -100,46 +91,64 @@ export const Contact = () => {
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
     >
-      <motion.h2
+      <motion.div
+        className="section-heading"
         variants={fadeInUp}
         initial="initial"
-        animate="animate"
+        whileInView="animate"
         viewport={{ once: true }}
       >
-        Get in Touch
-      </motion.h2>
+        <span>Contact</span>
+        <h2>Let&apos;s Connect</h2>
+      </motion.div>
 
-      <motion.div className="contact-content" variants={fadeInUp}>
-        <motion.form className="contact-form" onSubmit={handleSubmit}>
+      <motion.div
+        className="contact-content"
+        variants={staggerContainer}
+        initial="initial"
+        whileInView="animate"
+        viewport={{ once: true }}
+      >
+        <motion.div className="contact-intro" variants={fadeInUp}>
+          <p>
+            Have an internship opportunity, collaboration, or project idea? Send
+            a message and I&apos;ll get back to you.
+          </p>
+        </motion.div>
+
+        <motion.form className="contact-form" onSubmit={handleSubmit} variants={fadeInUp}>
           <motion.input
             type="text"
             name="name"
-            placeholder="Your Name..."
+            placeholder="Your name"
             required
-            whileFocus={{ scale: 1.02 }}
+            value={formData.name}
+            whileFocus={{ scale: 1.01 }}
             onChange={handleInputChange}
           />
           <motion.input
             type="email"
             name="email"
-            placeholder="Your Email..."
+            placeholder="Your email"
             required
-            whileFocus={{ scale: 1.02 }}
+            value={formData.email}
+            whileFocus={{ scale: 1.01 }}
             onChange={handleInputChange}
           />
           <motion.textarea
             name="message"
-            placeholder="Your Message..."
+            placeholder="Your message"
             required
-            whileFocus={{ scale: 1.02 }}
+            value={formData.message}
+            whileFocus={{ scale: 1.01 }}
             onChange={handleInputChange}
           />
 
           <motion.button
             className="submit-btn"
             type="submit"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
             disabled={formStatus.submitting}
           >
             {formStatus.submitting ? "Sending..." : "Send Message"}
@@ -149,7 +158,8 @@ export const Contact = () => {
             <motion.div
               className={`form-status ${
                 formStatus.success ? "success" : "error"
-              } `}
+              }`}
+              role="status"
             >
               {formStatus.message}
             </motion.div>

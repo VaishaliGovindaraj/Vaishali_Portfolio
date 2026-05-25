@@ -32,16 +32,16 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: #0b1120;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #888;
+  background: #334155;
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: #475569;
 }
 
 /* Selection color */
@@ -49,4 +49,3 @@ body {
   background: var(--primary-color);
   color: white;
 }
-
