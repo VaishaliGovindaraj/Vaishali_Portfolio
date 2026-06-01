@@ -102,8 +102,8 @@ export const Hero = () => {
             >
               {`const aboutMe: DeveloperProfile = {
   codename: "Vaishali Govindaraj",
-  origin: "🌍 A QA Engineer turned Frontend Developer",
-  role: "Fullstack Web Developer",
+  origin: "🌍 A Frontend Developer with QA Expertise",
+  role: "Frontend Web Developer",
   stack: {
     languages: ["JavaScript", "TypeScript", "SQL"],
     frameworks: ["React", "Next.js", "TailwindCSS", "Supabase"],
@@ -117,7 +117,8 @@ traits: [
   ],
   missionStatement:
     "Turning ideas into interfaces and bugs into feature",
-  availability: "Open for LIA / Internship opportunities"
+  availability: "Open for job / Internship opportunities"
+  visa status: "No Sponsorship Required"
 };`}
             </SyntaxHighlighter>
           </div>
