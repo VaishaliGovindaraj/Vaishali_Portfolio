@@ -336,6 +336,10 @@ body {
   margin-bottom: 3rem;
 }
 
+.project-grid + .project-section-title {
+  margin-top: 5rem;
+}
+
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -372,6 +376,7 @@ body {
   opacity: 0;
   transition: opacity 0.3s ease;
   z-index: 1;
+  pointer-events: none;
 }
 
 .project-card:hover::before {
@@ -413,6 +418,26 @@ body {
   transform: translateX(100%);
 }
 
+.project-video-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    linear-gradient(135deg, rgba(200, 132, 166, 0.2), rgba(247, 159, 121, 0.15)),
+    var(--background);
+  color: var(--light-text);
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+.project-video-placeholder video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: var(--background);
+  display: block;
+}
+
 .project-card h3 {
   padding: 1.5rem 1.5rem 0.5rem;
   font-size: 1.5rem;
@@ -439,86 +464,6 @@ body {
   font-size: 0.8rem;
   color: white;
   border: 1px solid rgba(244, 114, 182, 0.2);
-}
-
-/* Internship Section */
-
-.internship {
-  padding: 6rem 5%;
-  background: var(--section-bg);
-  position: relative;
-}
-
-.internship::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    var(--accent-color),
-    transparent
-  );
-}
-
-.internship h2 {
-  text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 3rem;
-}
-
-.internship-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.internship-card {
-  background: var(--card-bg);
-  border: 1px solid var(--card-border);
-  border-radius: 1rem;
-  overflow: hidden;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-  transition: all 0.3s ease;
-}
-
-.internship-card:hover {
-  border-color: var(--accent-color);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
-}
-
-.video-placeholder {
-  aspect-ratio: 16 / 9;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background:
-    linear-gradient(135deg, rgba(200, 132, 166, 0.2), rgba(247, 159, 121, 0.15)),
-    var(--background);
-  border-bottom: 1px solid var(--card-border);
-  color: var(--light-text);
-  font-weight: 600;
-  letter-spacing: 0;
-}
-
-.internship-card-content {
-  padding: 1.5rem;
-}
-
-.internship-card h3 {
-  font-size: 1.35rem;
-  margin-bottom: 0.75rem;
-  color: var(--text-color);
-}
-
-.internship-card p {
-  color: var(--light-text);
 }
 
 /* contact section */

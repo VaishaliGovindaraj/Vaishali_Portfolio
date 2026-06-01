@@ -14,72 +14,110 @@ const staggerContainer = {
   },
 };
 
-const internshipTasks = [
-  {
-    title: "Internship Task 1",
-    description: "Add task description here.",
-  },
-  {
-    title: "Internship Task 2",
-    description: "Add task description here.",
-  },
-  {
-    title: "Internship Task 3",
-    description: "Add task description here.",
-  },
-];
-
 export const Projects = () => {
   return (
-    <>
-      <motion.section
-        id="projects"
-        className="projects"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
+    <motion.section
+      id="projects"
+      className="projects"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6 }}
+    >
+      <motion.h2
+        className="project-section-title"
+        variants={fadeInUp}
+        initial="initial"
+        whileInView="animate"
         viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
       >
-        <motion.h2
-          variants={fadeInUp}
+        Matsmart Internship Highlights
+      </motion.h2>
+        <motion.div
+          className="project-grid"
+          variants={staggerContainer}
           initial="initial"
           whileInView="animate"
           viewport={{ once: true }}
         >
-          Matsmart Internship
-        </motion.h2>
           <motion.div
-            className="internship-grid"
-            variants={staggerContainer}
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true }}
+            className="project-card"
+            variants={fadeInUp}
+            whileHover={{ y: -10, transition: { duration: 0.2 } }}
           >
-            {internshipTasks.map((task) => (
-              <motion.article
-                className="internship-card"
-                variants={fadeInUp}
-                whileHover={{ y: -8, transition: { duration: 0.2 } }}
-                key={task.title}
-              >
-                <div className="video-placeholder">
-                  <span>Video placeholder</span>
-                </div>
-                <div className="internship-card-content">
-                  <h3>{task.title}</h3>
-                  <p>{task.description}</p>
-                </div>
-              </motion.article>
-            ))}
+            <motion.div
+              className="project-image project-video-placeholder"
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.2 }}
+            >
+              <video
+                src="/videos/Less-Prominent-Progress-Bar.mp4"
+                controls
+                preload="metadata"
+              />
+            </motion.div>
+            <h3>Progress Bar Feature</h3>
+            <p>The Progress Bar has been enhanced with visually appealing design and improved functionality.</p>
+            <div className="project-tech">
+              <span>React</span>
+              <span>Next.js</span>
+              <span>TypeScript</span>
+              <span> Tailwind CSS</span>
+            </div>
           </motion.div>
-        <motion.h2
-          variants={fadeInUp}
-          initial="initial"
-          whileInView="animate"
-          viewport={{ once: true }}
-        >
-          My Projects
-        </motion.h2>
+
+          <motion.div
+            className="project-card"
+            variants={fadeInUp}
+            whileHover={{ y: -10, transition: { duration: 0.2 } }}
+          >
+            <motion.div
+              className="project-image project-video-placeholder"
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.2 }}
+            >
+              <video
+                src="/videos/Save-Search-for-logges-out-users.mp4"
+                controls
+                preload="metadata"
+              />
+            </motion.div>
+            <h3>Save Query Feature</h3>
+            <p>Save Query feature has been implemented for logged-out users to save their search queries</p>
+            <div className="project-tech">
+              <span>Matsmart Internship</span>
+              <span>Video Task</span>
+            </div>
+          </motion.div>
+
+          <motion.div
+            className="project-card"
+            variants={fadeInUp}
+            whileHover={{ y: -10, transition: { duration: 0.2 } }}
+          >
+            <motion.div
+              className="project-image"
+              style={{
+                backgroundImage: "url('/statsig_cover_image.png')",
+              }}
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.2 }}
+            />
+            <h3>Statsig</h3>
+            <p>Used Statsig for experimentation and feature rollouts, enabling data-driven decisions based on user response and performance metrics.</p>
+          </motion.div>
+        </motion.div>
+
+      <motion.h2
+        className="project-section-title"
+        variants={fadeInUp}
+        initial="initial"
+        whileInView="animate"
+        viewport={{ once: true }}
+      >
+        My Projects
+      </motion.h2>
+
         <motion.div
           className="project-grid"
           variants={staggerContainer}
@@ -239,7 +277,6 @@ export const Projects = () => {
             </div>
           </motion.div>
         </motion.div>
-      </motion.section>
-    </>
+    </motion.section>
   );
 };
